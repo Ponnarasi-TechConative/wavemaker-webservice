@@ -1,27 +1,35 @@
-<ng-container >
-	<div class="modal-header">
-		<h5 class="modal-title" id="modal-basic-title">Web Service</h5>
-		<button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
-	</div>
-	<div class="modal-body">
-		<form>
-			<div class="mb-3">
-				<label for="dateOfBirth">Date of birth</label>
-				<div class="input-group">
-					<input
-						id="dateOfBirth"
-						class="form-control"
-						placeholder="yyyy-mm-dd"
-						name="dp"
-						ngbDatepicker
-						#dp="ngbDatepicker"
-					/>
-					<button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button>
-				</div>
-			</div>
-		</form>
-	</div>
-	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Save click')">Save</button>
-	</div>
+<ng-container>
+    <div class="modal-header">
+        <h5 class="modal-title fw-normal font-18" id="modal-basic-title">Web Service</h5>
+        <div>
+            <i class="bi bi-question-circle me-2 text-muted"></i>
+            <a class="text-muted text-decoration-none" href="">Help</a>
+            <span class="btn-close ms-4 me-3 cursor-pointer" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></span>
+        </div>
+    </div>
+    <div class="modal-body p-0">
+        <ng-template [ngIf]="serviceflag">
+            <p class="p-3">Select a webservice provider</p>
+            <div class="serviceList d-flex justify-content-center align-items-center">
+                <ng-container *ngFor="let service of serviceList">
+                    <div class="card service-card text-center m-3 rounded-0 box-shadow-style cursor-pointer"
+                        (click)="selectService(service.name)">
+                        <div class="card-body">
+                            {{service.name}}
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </ng-template>
+        <div *ngIf="selectedService == 'REST'">
+            <app-main-screen></app-main-screen>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-100" (click)="activeModal.close('Save click')">Cancel</button>
+        <div *ngIf="selectedService == 'REST'">
+        <button type="button" class="btn btn-secondary opacity-75 btn-100 m-2" >Back</button>
+        <button type="button" class="btn btn-primary opacity-50 btn-100 m-2" >Import</button>
+        </div>
+    </div>
 </ng-container>

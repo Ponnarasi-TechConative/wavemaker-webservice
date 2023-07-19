@@ -1,5 +1,37 @@
-::ng-deep .modal-header{
-    border-top-left-radius:0px;
-    border-top-right-radius:0px;
+::ng-deep .modal-header {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     background-color: #EFEFEF;
+}
+
+::ng-deep .modal-footer {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px
+}
+::ng-deep .modal-lg{
+    --bs-modal-width: 944px;
+}
+::ng-deep .modal-content{
+    border-radius: 0;
+    color: #212121;
+}
+::ng-deep .btn-close{
+    font-size: 11px;
+}
+
+.serviceList{
+    height: 300px;
+}
+.box-shadow-style{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.15); 
+}
+.service-card{
+    border: 1px solid #e3e3e3;
+    color: #212121;
+    font-size: 12px;
+    width: 170px;
+    height: 151px;
+}
+.service-card:hover{
+    border: 1px solid #1794ef;
 }

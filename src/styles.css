@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.btn-secondary{
+    background-color: #838282;
+    border: 1px solid #8b8a8a;
+    color: #f5f3f3;
+}
+.btn-primary{
+    background-color: #1794ef;
+    border: 1px solid #108ce7;
+}
+.btn{
+    height: 28px;
+    border-radius: 2px;
+    text-transform: capitalize;
+    padding: 2px 10px 1px;
+    font-size: 13px;
+}
+.btn-100{
+    min-width: 100px;
+}
+.font-12{
+    font-size: 12px;
+}
+.font-18{
+    font-size: 18px;
+}

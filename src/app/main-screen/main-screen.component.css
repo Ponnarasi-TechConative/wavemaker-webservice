@@ -1,0 +1,85 @@
+.form-select, .form-control{
+    border-color: #d3d3d3;
+    border-radius: 2px;
+    font-size: 11px;
+}
+.form-control:focus, .form-select:focus{
+    outline: none;
+    box-shadow:none;
+    border: 1px solid #1794ef;
+}
+a:-webkit-any-link:focus-visible {
+    outline: none !important;
+}
+.w-10{
+    width: 10rem;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    height: 21px;
+    width: 38px;
+    background: #cac8c8;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"] {
+    background: #cac8c8;
+}
+
+input[type="checkbox"]::after {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    top: 0;
+    left: 0;
+    background: #929292;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"]::after {
+    left: 50%;
+    background: #1794ef;
+}
+.nav-tabs-style{
+    background-color: #f3f5f6;
+    padding-left: 20px;
+    border-top: 1px solid #ddd;
+}
+::ng-deep .tab-content{
+    padding: 5px 1rem   ;
+}
+::ng-deep .nav-link{
+    border-top-left-radius:0 !important;
+    border-top-right-radius:0 !important;
+    font-size: 12px;
+    color: #676767;
+}
+::ng-deep .nav-tabs .nav-link.active{
+    border-top: 2px solid #1794ef !important;
+}
+
+::ng-deep .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+    color: #676767;
+}
+::ng-deep .nav-tabs .nav-link.disabled, .nav-tabs .nav-link:disabled{
+    cursor: not-allowed;
+    pointer-events: auto;
+    color: #bdbdbd;
+}
+.ace-editor{
+    width: 100% !important;
+    height: 200px !important;
+}
+.service-content{
+    height: calc(100% - 100px);
+    overflow-y: auto;
+}
+.service-height{
+    height: 452px;
+}
