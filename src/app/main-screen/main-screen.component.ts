@@ -9,6 +9,7 @@ import 'ace-builds/src-noconflict/ace';
 import 'ace-builds/src-noconflict/theme-twilight';
 import 'ace-builds/src-noconflict/mode-json';
 import * as ace from 'ace-builds';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-main-screen',
@@ -19,6 +20,9 @@ export class MainScreenComponent implements AfterViewInit, OnDestroy {
   code: string = '';
   aceEditor: any;
   public methodList = ['GET', 'POST', 'PUT', 'HEAD', 'PATCH', 'DELETE'];
+
+  constructor(public activeModal: NgbActiveModal) {}
+
 
   @ViewChild('editor', { static: false })
   private editor?: ElementRef<HTMLElement>;

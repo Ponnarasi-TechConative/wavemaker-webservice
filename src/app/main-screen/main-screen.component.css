@@ -77,9 +77,30 @@ input:checked[type="checkbox"]::after {
     height: 200px !important;
 }
 .service-content{
-    height: calc(100% - 100px);
+    height: calc(100% - 124px);
     overflow-y: auto;
 }
 .service-height{
     height: 452px;
+}
+
+::ng-deep .modal-header {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: #EFEFEF;
+}
+
+::ng-deep .modal-footer {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px
+}
+::ng-deep .modal-lg{
+    --bs-modal-width: 944px;
+}
+::ng-deep .modal-content{
+    border-radius: 0;
+    color: #212121;
+}
+::ng-deep .btn-close{
+    font-size: 11px;
 }
