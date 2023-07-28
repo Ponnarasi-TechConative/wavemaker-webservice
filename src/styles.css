@@ -6,20 +6,20 @@ body{
     cursor: pointer;
 }
 .btn-secondary{
-    background-color: #838282;
-    border: 1px solid #8b8a8a;
-    color: #f5f3f3;
+    background-color: #838282 !important;
+    border: 1px solid #8b8a8a !important;
+    color: #f5f3f3 !important;
 }
 .btn-primary{
-    background-color: #1794ef;
-    border: 1px solid #108ce7;
+    background-color: #1794ef !important;
+    border: 1px solid #108ce7 !important;
 }
 .btn{
-    height: 28px;
-    border-radius: 2px;
+    height: 28px !important;
+    border-radius: 2px !important;
     text-transform: capitalize;
-    padding: 2px 10px 1px;
-    font-size: 13px;
+    padding: 2px 10px 1px !important;
+    font-size: 13px !important;
 }
 .btn-100{
     min-width: 100px;

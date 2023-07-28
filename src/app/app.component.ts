@@ -1,17 +1,21 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { MainScreenComponent } from './main-screen/main-screen.component';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
+ 
 declare const SwaggerUIBundle: any;
+declare const RestImport: any;
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit {
   modalRef: any;
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) {
+  }
   ngOnInit(){
     this.openModal()
   }
@@ -26,9 +30,14 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
   ngAfterViewInit(): void {
     // Swagger UI configuration
-    const ui = SwaggerUIBundle({
-      url: 'https://petstore.swagger.io/v2/swagger.json',
-      dom_id: '#swagger-ui',
-    });
+    // const ui = SwaggerUIBundle({
+    //   url: 'https://petstore.swagger.io/v2/swagger.json',
+    //   dom_id: '#swagger-ui',
+    // });
+    
+
+    const reactUI = RestImport({
+      dom_id: '#rest-import-ui',
+    })
   }
 }
